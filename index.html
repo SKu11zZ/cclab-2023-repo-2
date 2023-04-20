@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Text Similarity Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+<body>
+
+<!---
+  <audio id="BGM" autoplay loop>
+    <source src="bgm.mp3" type="audio/mpeg">
+  </audio>
+--->
+
+  <h1>Calculate the similarity between texts</h1>
+  <br><br>
+
+  <div>
+    <div id="Main_box">
+    <Main>
+      <Main_text for="text1">Text 1:</Main_text>
+        <input type="text" id="text1" name="text1" required placeholder="Let's Input the first sentence">
+      <br><br><br>
+
+      <Main_text for="text2">Text 2:</Main_text>
+        <input type="text" id="text2" name="text2" required placeholder="And write ur second sentence">
+        <br><br>
+
+      <button type="button" onclick="calculateSimilarity()">Calculate</button>
+      <!---
+      <div id="loading_button"> 
+				<button> onclick="calculateSimilarity()"<span>Calculate</a></span></button>
+			</div>
+      --->
+    </Main>
+  </div>
+    <p>Text similarity: <span id="similarity"></span></p>
+  </div>
+
+  <random_text for="text0">A random pic I took from my house ↘</random_text>
+  <div>
+    <img src="bgimg.jpg" width="100%"></img>
+  </div>
+
+
+<!-- API部分  -->
+  <script>
+    const apiKey = 'f586d35b5bmsh1991187a4f828bcp11b7f6jsn4430f5e1a0a9';
+
+    function calculateSimilarity() {
+      const text1 = document.getElementById('text1').value;
+      const text2 = document.getElementById('text2').value;
+
+      const url = `https://twinword-text-similarity-v1.p.rapidapi.com/similarity/?text1=${text1}&text2=${text2}`;
+
+      fetch(url, {
+        method: 'GET',
+        headers: {
+          'X-RapidAPI-Key': apiKey,
+          'Content-Type': 'application/json'
+        }
+      })
+
+
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        document.getElementById('similarity').innerText = data['similarity'];
+      })
+    }
+  </script>
+</body>
+</html>

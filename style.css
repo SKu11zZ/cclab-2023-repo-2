@@ -1,0 +1,130 @@
+
+
+body {
+        background: linear-gradient(to bottom right, #7ed56f, #28b485);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        animation-name: fadeIn;
+        animation-duration: 1s;
+    }
+
+/* old 
+  Main_box {
+      width: 70%;
+      background: #00000060;
+      margin: auto;
+      margin-top: 2000px;
+      text-align: center;
+      border-radius: 20px;
+      padding: 20px 20px;
+    }
+*/
+
+  #BGM {
+      display: none;
+    }
+
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 36px;
+    color: #FFFFFF;
+  }
+  
+  Main {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  Main_text {
+    font-size: 24px;
+  }
+
+  random_text {
+    font-size: 16px;
+    color: #f2ff78;
+  }
+ /* 
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid #bebebe;
+    border-bottom: 2px solid #fff787;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+*/
+  input[type="text"] {
+    border: 0;
+    width: 60%;
+    font-size: 20px;
+    color: #3e8e7d;
+    background: #FFFFFF90;
+    border-bottom: 2px solid #FFFFFF;
+    padding: 5px 10px;
+    margin-top: 10px;
+  }
+
+  input[type="text"]:focus {
+    transform: scale(1.03);
+    border-color: #ffffff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 89, 255, 0.75);
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+  }
+  
+  button:hover {
+    background-color: #3e8e7d;
+  }
+  
+  p {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  #similarity {
+    font-weight: bold;
+    color: #fdff84;
+    font-size: 25px;
+  }
+  
+
+
+  #loading_button {
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    height:100
+  
+  }
+
+  /* 
+    img:hover {
+    opacity: 0.8;
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+  }
+  */
+
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
